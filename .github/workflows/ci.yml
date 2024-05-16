@@ -19,8 +19,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-java@v2
-
+      - uses: actions/setup-java@v3
+        with:
+          version: '21.x'
       - name: Install dependencies
         run: dart pub get
 
