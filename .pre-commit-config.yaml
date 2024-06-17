@@ -1,6 +1,39 @@
 # Copyright 2024 QSoft, Ltd. All rights reserved.
+
 repos:
-  - repo: https://github.com/Cretezy/flutter-format-pre-commit
-    rev: "master"
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
     hooks:
-      - id: flutter-format
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
+    hooks:
+      - id: black
+  - repo: https://github.com/quang9999999999/dart-format-pre-commit
+    rev: "main"
+    hooks:
+      - id: dart-format
+  - repo: https://github.com/asottile/add-trailing-comma
+    rev: v3.1.0
+    hooks:
+      - id: add-trailing-comma
+  # - repo: https://github.com/dluksza/flutter-analyze-pre-commit
+  #   rev: "master"
+  #   hooks:
+  #   - id: dart-format
+
+  # - repo: https://github.com/Cretezy/flutter-format-pre-commit
+  #   rev: "master"
+  #   hooks:
+  #     - id: flutter-format
+  #       name: Format Flutter Code
+  #       entry: run
+  #       language: script
+  #       files: \.dart$
+  # - repo: https://github.com/Cretezy/dart-format-pre-commit
+  #   rev: "master"
+  #   hooks:
+  #     - id: dart-format

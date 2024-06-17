@@ -8,9 +8,10 @@
 name: Demo CI
 
 on:
-  push:
-    branches: ["main"]
+  # push:
+  #   branches: ["main"]
   pull_request:
+    types: [closed]
     branches: ["main"]
 
 jobs:
